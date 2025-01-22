@@ -1,11 +1,17 @@
-package com.sdm.interview.entity;
+package com.sdm.interview.persistance.entity;
+
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
-@Entity
+@Entity(name = "students")
+@Table(name = "students")
 public class Student {
 
     @Id
@@ -15,7 +21,10 @@ public class Student {
     private String firstName;
     private String lastName;
     private String email;
-    private String position;
+
+    @OneToMany
+    @JoinColumn(name = "student_id")
+    private List<Grade> grades;
 
     public Long getId() {
         return id;
@@ -49,11 +58,11 @@ public class Student {
         this.email = email;
     }
 
-    public String getPosition() {
-        return position;
+    public List<Grade> getGrades() {
+        return grades;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setGrades(List<Grade> grades) {
+        this.grades = grades;
     }
 }

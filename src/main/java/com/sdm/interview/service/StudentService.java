@@ -1,7 +1,7 @@
 package com.sdm.interview.service;
 
-import com.sdm.interview.entity.Student;
-import com.sdm.interview.repository.StudentRepository;
+import com.sdm.interview.persistance.entity.Student;
+import com.sdm.interview.persistance.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

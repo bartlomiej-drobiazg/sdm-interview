@@ -1,6 +1,6 @@
-package com.sdm.interview.repository;
+package com.sdm.interview.persistance.repository;
 
-import com.sdm.interview.entity.Student;
+import com.sdm.interview.persistance.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
